@@ -9,7 +9,7 @@ import SwiftUI
 
 #if canImport(UIKit)
 public extension View {
-    public func hideKeyboard() {
+    func hideKeyboard() {
         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
 }
