@@ -13,18 +13,18 @@ import Foundation
  print(|a|, |b|) // 42, 4.2
  */
 
-struct AbsoluteValueWrapper<T: Comparable & SignedNumeric> {
+public struct AbsoluteValueWrapper<T: Comparable & SignedNumeric> {
     var value: T
     var absoluteValue: T {
         return abs(value)
     }
 }
 prefix operator |
-prefix func | <T: Comparable & SignedNumeric> (value: AbsoluteValueWrapper<T>) -> T {
+prefix public func | <T: Comparable & SignedNumeric> (value: AbsoluteValueWrapper<T>) -> T {
     return value.absoluteValue
 }
 
 postfix operator |
-postfix func | <T: Comparable & SignedNumeric> (value: T) -> AbsoluteValueWrapper<T> {
+postfix public func | <T: Comparable & SignedNumeric> (value: T) -> AbsoluteValueWrapper<T> {
     return AbsoluteValueWrapper(value: value)
 }
