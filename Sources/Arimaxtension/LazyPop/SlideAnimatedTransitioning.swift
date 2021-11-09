@@ -11,9 +11,9 @@ public class SlideAnimatedTransitioning: NSObject {
 
 }
 
-public extension SlideAnimatedTransitioning: UIViewControllerAnimatedTransitioning {
+extension SlideAnimatedTransitioning: UIViewControllerAnimatedTransitioning {
 
-    func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
+    public func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         
         let containerView = transitionContext.containerView
         let fromView = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.from)!.view
@@ -55,7 +55,7 @@ public extension SlideAnimatedTransitioning: UIViewControllerAnimatedTransitioni
         })
     }
     
-    func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
+    public func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         
         return 0.3
     }

@@ -40,7 +40,7 @@ public final class SwipeRightToPopViewController<Content>: UIHostingController<C
     private var parentNavigationControllerToUse: UINavigationController?
     private var gestureAdded = false
     
-    override func viewDidLayoutSubviews() {
+    public override func viewDidLayoutSubviews() {
         // You need to add gesture events after every subview layout to protect against weird edge cases
         //    One notable edgecase is if you are in a splitview in landscape. In this case, there will be
         //    no nav controller with 2 vcs, so our addGesture will fail. After rotating back to portrait,
@@ -113,16 +113,16 @@ public final class SwipeRightToPopViewController<Content>: UIHostingController<C
         }
     }
     
-    override func didReceiveMemoryWarning() {
+    public override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    public func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         
         return SlideAnimatedTransitioning()
     }
     
-    func navigationController(_ navigationController: UINavigationController, interactionControllerFor animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+    public func navigationController(_ navigationController: UINavigationController, interactionControllerFor animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
         
         parentNavigationControllerToUse?.delegate = nil
         navigationController.delegate = nil
