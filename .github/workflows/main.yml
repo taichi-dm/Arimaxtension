@@ -15,5 +15,3 @@ jobs:
           swift-version: "5.3.3"
       - name: Get swift version
         run: swift --version # Swift 5.3.3
-      - name: Build
-        run: xcodebuild -sdk iphonesimulator -configuration Debug build
