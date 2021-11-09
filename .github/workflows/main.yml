@@ -15,7 +15,7 @@ jobs:
     runs-on: macos-latest
     
     steps:
-      - uses: actions/checkout@v2 #fwal/setup-swift@d43a564349d1341cd990cfbd70d94d63b8899475
+      - uses: fwal/setup-swift@d43a564349d1341cd990cfbd70d94d63b8899475 #actions/checkout@v2 
         with:
           swift-version: "5.3.3"
       - name: Get swift version
