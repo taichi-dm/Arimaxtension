@@ -7,11 +7,11 @@
 //
 import UIKit
 
-class SlideAnimatedTransitioning: NSObject {
+public class SlideAnimatedTransitioning: NSObject {
 
 }
 
-extension SlideAnimatedTransitioning: UIViewControllerAnimatedTransitioning {
+public extension SlideAnimatedTransitioning: UIViewControllerAnimatedTransitioning {
 
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         

@@ -32,7 +32,7 @@ fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
     }
 }
 
-class SwipeRightToPopViewController<Content>: UIHostingController<Content>, UINavigationControllerDelegate where Content : View {
+public final class SwipeRightToPopViewController<Content>: UIHostingController<Content>, UINavigationControllerDelegate where Content : View {
     
     fileprivate var lazyPopContent: LazyPop<Content>?
     private var percentDrivenInteractiveTransition: UIPercentDrivenInteractiveTransition?
