@@ -1,25 +1,19 @@
-name: CI
+name: Swift
 
-on:
+on: 
   push:
     branches: [ main ]
   pull_request:
     branches: [ main ]
-
-env:
-  DEVELOPER_DIR: /Applications/Xcode.app
-
+   
 jobs:
   build:
-    runs-on: macOS-latest
+    runs-on: macos-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Build
-      run: swift build -v
-
-  test:
-    runs-on: macOS-latest
-    steps:
-    - uses: actions/checkout@v2
-    - name: Test
-      run: swift test -v
+      - uses: actions/checkout@v2 #fwal/setup-swift@d43a564349d1341cd990cfbd70d94d63b8899475
+        with:
+          swift-version: "5.3.3"
+      - name: Get swift version
+        run: swift --version # Swift 5.3.3
+      - name: Build
+        run: xcodebuild -sdk iphonesimulator -configuration Debug build
