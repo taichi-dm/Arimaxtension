@@ -17,9 +17,9 @@ jobs:
     - name: Build
       run: swift build -v
 
-  #test:
-    #runs-on: macOS-latest
-    #steps:
-    #- uses: actions/checkout@v2
-    #- name: Test
-    #  run: swift test -v
+  test:
+    runs-on: macOS-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Test
+      run: swift test -v
