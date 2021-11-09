@@ -8,10 +8,15 @@ on:
    
 jobs:
   build:
+  
     runs-on: macos-latest
+    
     steps:
       - uses: actions/checkout@v2 #fwal/setup-swift@d43a564349d1341cd990cfbd70d94d63b8899475
         with:
           swift-version: "5.3.3"
       - name: Get swift version
         run: swift --version # Swift 5.3.3
+      - name: Build
+        run: swift build -v
+        
