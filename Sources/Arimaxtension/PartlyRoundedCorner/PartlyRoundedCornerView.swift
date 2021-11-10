@@ -9,7 +9,7 @@ import SwiftUI
 
 /// Ref: https://qiita.com/chocoyama/items/1cb7040f0e717406a6f4#uiviewrepresentable%E3%81%A8mask%E3%82%92%E7%B5%84%E3%81%BF%E5%90%88%E3%82%8F%E3%81%9B%E3%82%8B
 
-struct PartlyRoundedCornerView: UIViewRepresentable {
+public struct PartlyRoundedCornerView: UIViewRepresentable {
     let cornerRadius: CGFloat
     let maskedCorners: CACornerMask
 
@@ -21,9 +21,8 @@ struct PartlyRoundedCornerView: UIViewRepresentable {
         uiView.backgroundColor = .white
         return uiView
     }
-
-    func updateUIView(_ uiView: UIView, context: UIViewRepresentableContext<PartlyRoundedCornerView>) {
-    }
+    
+    func updateUIView(_ uiView: UIView, context: UIViewRepresentableContext<PartlyRoundedCornerView>) {}
 }
 
 struct PartlyRoundedCornerView_Previews: PreviewProvider {

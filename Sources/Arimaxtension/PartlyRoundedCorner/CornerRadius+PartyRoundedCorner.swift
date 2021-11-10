@@ -15,7 +15,7 @@ import SwiftUI
 ///             .background(Color.red)
 ///             .cornerRadius(20, maskedCorners: [.layerMinXMinYCorner, .layerMaxXMinYCorner])
 
-extension View {
+public extension View {
     func cornerRadius(_ radius: CGFloat, maskedCorners: CACornerMask) -> some View {
         self.modifier(PartlyRoundedCornerModifier(cornerRadius: radius,
                                                   maskedCorners: maskedCorners))
