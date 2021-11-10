@@ -13,7 +13,7 @@ public struct PartlyRoundedCornerModifier: ViewModifier {
     let cornerRadius: CGFloat
     let maskedCorners: CACornerMask
 
-    func body(content: Content) -> some View {
+    public func body(content: Content) -> some View {
         content.mask(PartlyRoundedCornerView(cornerRadius: self.cornerRadius,
                                              maskedCorners: self.maskedCorners))}
 }

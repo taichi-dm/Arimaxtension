@@ -13,7 +13,7 @@ public struct PartlyRoundedCornerView: UIViewRepresentable {
     let cornerRadius: CGFloat
     let maskedCorners: CACornerMask
 
-    func makeUIView(context: UIViewRepresentableContext<PartlyRoundedCornerView>) -> UIView {
+    public func makeUIView(context: UIViewRepresentableContext<PartlyRoundedCornerView>) -> UIView {
         // 引数で受け取った値を利用して、一部の角のみを丸くしたViewを作成する
         let uiView = UIView()
         uiView.layer.cornerRadius = cornerRadius
@@ -22,7 +22,7 @@ public struct PartlyRoundedCornerView: UIViewRepresentable {
         return uiView
     }
     
-    func updateUIView(_ uiView: UIView, context: UIViewRepresentableContext<PartlyRoundedCornerView>) {}
+    public func updateUIView(_ uiView: UIView, context: UIViewRepresentableContext<PartlyRoundedCornerView>) {}
 }
 
 struct PartlyRoundedCornerView_Previews: PreviewProvider {
