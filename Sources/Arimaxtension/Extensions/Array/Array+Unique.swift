@@ -7,30 +7,24 @@
 
 import Foundation
 
-public extension Array where Element: Hashable {
+public extension Array where Element: Equatable {
     
-    /// example
-    /// let array = ["hello", "world", "hey", "world"]
-    /// array.uniqued() -> ["hello", "world", "hey"]
-    func uniqued() -> Array {
-        
-        var hash = [Element : Bool]()
-        return reduce([], { (array, element) in
-            if hash[element] != nil { return array }
-            hash[element] = true
-            return array + [element]
-        })
-    }
-    
-    
+    /// Returns uniqued array.
     ///
-    /// Makes it unique.
-    /// ============================
-    mutating func unique() {
-        self = self.uniqued()
+    ///     let fruits = ["apple", "grape", "lemon", "apple", "lemon"]
+    ///     let uniqued = fruits.uniqued()
+    ///     print(uniqued)
+    ///     // Prints ["apple", "grape", "lemon"]
+    ///
+    /// - Returns: Array that has no duplicated elements.
+    ///
+    public var uniqued: [Element] {
+        reduce([Element]()) { result, sequence in
+            result.contains(sequence) ? result : result + [sequence]
+        }
     }
     
-    func removedDuplicate() -> Array {
-        uniqued()
-    }
+    /// Makes `self` unique.
+    public mutating func unique() { self = self.uniqued }
 }
+
