@@ -18,13 +18,13 @@ public extension Array where Element: Equatable {
     ///
     /// - Returns: Array that has no duplicated elements.
     ///
-    public var uniqued: [Element] {
+    var uniqued: [Element] {
         reduce([Element]()) { result, sequence in
             result.contains(sequence) ? result : result + [sequence]
         }
     }
     
     /// Makes `self` unique.
-    public mutating func unique() { self = self.uniqued }
+    mutating func unique() { self = self.uniqued }
 }
 
