@@ -6,9 +6,10 @@
 //
 
 import Foundation
+import SwiftUI
 
+@available(iOS, introduced: 13.0, deprecated: 100000.0, message: "use Algorithm.unique() instead.")
 public extension Array where Element: Equatable {
-    
     /// Returns uniqued array.
     ///
     ///     let fruits = ["apple", "grape", "lemon", "apple", "lemon"]
