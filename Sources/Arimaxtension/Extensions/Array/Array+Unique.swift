@@ -5,7 +5,6 @@
 //  Created by Taichi Arima on 2021/11/09.
 //
 
-import Foundation
 import SwiftUI
 
 @available(iOS, introduced: 13.0, deprecated: 100000.0, message: "use Algorithm.unique() instead.")
