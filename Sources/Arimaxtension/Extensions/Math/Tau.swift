@@ -8,6 +8,6 @@
 import CoreGraphics
 
 public extension CGFloat {
-    /// The mathematical constantτ (6.28318...)
+    /// The mathematical constant τ (6.28318...)
     static var tau: CGFloat { 2 * .pi }
 }
