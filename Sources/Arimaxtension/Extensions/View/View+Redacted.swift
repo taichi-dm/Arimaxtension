@@ -9,7 +9,7 @@ import SwiftUI
 
 public extension View {
     @ViewBuilder
-    public func redacted(showPlaceholder: Bool) -> some View {
+    func redacted(showPlaceholder: Bool) -> some View {
         if showPlaceholder {
             self
                 .redacted(reason: .placeholder)
