@@ -9,8 +9,8 @@ import SwiftUI
 
 // ref: https://scrapbox.io/youandtaichi/Clubhouse%E3%81%AE%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E6%A5%95%E5%86%86%E3%82%92SwiftUI%E3%81%A7%E4%BD%9C%E3%82%8B
 
-struct SuperEllipse: View {
-    var body: some View {
+public struct SuperEllipse: View {
+    public var body: some View {
         Image(systemName: "moon")
             .resizable()
             .frame(width: 100, height: 100)
@@ -19,9 +19,9 @@ struct SuperEllipse: View {
     }
 }
 
-struct SuperEllipseShape: Shape {
+public struct SuperEllipseShape: Shape {
     let rate: CGFloat
-    func path(in rect: CGRect) -> Path {
+    public func path(in rect: CGRect) -> Path {
         
         let handleX: CGFloat = rect.size.width * rate / 2
         let handleY: CGFloat = rect.size.height * rate / 2
