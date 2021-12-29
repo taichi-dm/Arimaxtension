@@ -57,9 +57,3 @@ struct SuperEllipseShape: Shape {
         return path
     }
 }
-
-fileprivate struct SuperEllipse_Previews: PreviewProvider {
-    static var previews: some View {
-        SuperEllipse()
-    }
-}
