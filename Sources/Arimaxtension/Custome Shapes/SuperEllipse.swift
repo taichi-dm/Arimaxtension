@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-// ref: https://scrapbox.io/youandtaichi/Clubhouse%E3%81%AE%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E6%A5%95%E5%86%86%E3%82%92SwiftUI%E3%81%A7%E4%BD%9C%E3%82%8B
+// ref: https://scrapbox.io/youandtaichi/Clubhouseのスーパー楕円をSwiftUIで作る
 
 public struct SuperEllipse: View {
     public var body: some View {
