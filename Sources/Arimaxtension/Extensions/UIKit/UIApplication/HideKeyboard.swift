@@ -5,7 +5,6 @@
 //  Created by Taichi Arima on 2021/11/09.
 //
 
-import Foundation
 import UIKit
 
 public extension UIApplication {

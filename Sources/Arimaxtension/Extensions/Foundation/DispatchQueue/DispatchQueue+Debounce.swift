@@ -5,7 +5,7 @@
 //  Created by Taichi Arima on 2021/11/09.
 //
 
-import Dispatch
+import Foundation
 
 public extension DispatchQueue {
     func debounce(delay: DispatchTimeInterval) -> (_ action: @escaping () -> ()) -> () {
