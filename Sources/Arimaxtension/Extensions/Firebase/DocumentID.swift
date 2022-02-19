@@ -4,8 +4,8 @@
 //
 //  Created by nori on 2021/09/17.
 //
-import Foundation
 
+import Foundation
 
 public protocol IDGeneratable: Identifiable where ID == String {
 
