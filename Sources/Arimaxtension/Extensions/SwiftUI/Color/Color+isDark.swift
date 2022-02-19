@@ -8,7 +8,7 @@
 import SwiftUI
 import UIKit
 
-extension Color {
+public extension Color {
 
     // return true if color is dark
     public var isDark: Bool {
